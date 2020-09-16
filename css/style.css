@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+.header-home {
+  height: 90vh;
+  border: 1px solid black;
+  background-color: #1e90ff;
+  color: white;
+  font-size: 18px;
+  font-family: sans-serif Tahoma;
+}
+
+.header-about-text {
+  position: absolute;
+  top: 220px;
+  right: 110px;
+}
+.example-template .col {
+  margin-top: 25px;
+  border: 1px solid black;
+}
+
+#title {
+  font-size: 60px;
+  font-family: Comic Sans MS;
+  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+  text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
+  color: white;
+}
+#name {
+  text-shadow: 1px 1px 2px MistyRose, 0 0 1em #9292e2, 0 0 0.2em black;
+  color: white;
+  font-size: 40px;
+  font-family: tahoma;
+}
+#icon {
+  font-size: 20px;
+  color: black;
+  margin-top: -60px;
+}
+
+#mark {
+  color: white;
+  font-size: 29px;
+  font-family: oblique;
+}
+
+.video {
+  width: 650px;
+  height: 400px;
+}
+
+.btn-outline-danger {
+  width: 400px;
+  height: 80px;
+  font-size: 2.5rem;
+  margin-top: 30px;
+  text-align: center;
+  padding-top: -23px;
+  margin-left: 50px;
+  color: #17a2b8;
+  border-color: PowderBlue;
+  background-color: Azure;
+}
+.btn-outline-danger:hover {
+  color: black;
+  border-color: PowderBlue;
+  background-color: PowderBlue;
+}
+
+.btn-outline-info {
+  color: #17a2b8;
+  border-color: PowderBlue;
+  background-color: Azure;
+}
+
+.btn-outline-info:hover {
+  color: black;
+  border-color: PowderBlue;
+  background-color: PowderBlue;
+}
+
+#h1 {
+  font-size: 70px;
+  font-family: sans-serif Tahoma;
+  text-shadow: 1px 1px 2px #4d4c52, 0 0 1em #b2bbe4, 0 0 0.2em #1b50e6;
+  color: deepskyblue;
+  margin-top: 30px;
+  text-align: center;
+}

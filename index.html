@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <title>DyCv</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
+    <link rel="stylesheet" type="text/css" href="libs/fontawesome/all.min.css">
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/load.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <!--Jquery-->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</head>
+
+<body>
+    <!--Loading-->
+    <div class="preloader">
+        <div class="preloader__content">
+            <div class="preloader__fisrt"></div>
+            <div class="preloader__second"></div>
+            <div class="preloader__third"></div>
+        </div>
+    </div>
+    <!--Sign Up and Sign In-->
+    <div class="container" id="log_cont">
+        <div class="login">
+            <!-- Sign up form -->
+            <section class="signup">
+                <div class="container_of_sign">
+                    <div class="signup-content">
+                        <p class="close_zmdi"><i class="zmdi zmdi-close-circle-o zmdi-hc-2x"></i></p>
+                        <div class="signup-form">
+                            <h2 class="form-title">Sign up</h2>
+                            <form class="register-form" id="register-form">
+                                <div class="form-group">
+                                    <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                    <input type="text" name="name" id="form_fname" placeholder="Your Name"
+                                        class="form_inp" autocomplete="off" />
+                                </div>
+                                <span class="error_form" id="fname_error_message"></span>
+                                <div class="form-group">
+                                    <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                    <input type="email" name="email" id="form_email" placeholder="Your Email"
+                                        class="form_inp" autocomplete="off" />
+                                </div>
+                                <span class="error_form" id="email_error_message"></span>
+                                <div class="form-group">
+                                    <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                    <input type="password" name="pass" id="form_password" placeholder="Password"
+                                        class="form_inp" autocomplete="off" />
+                                </div>
+                                <span class="error_form" id="password_error_message"></span>
+                                <div class="form-group">
+                                    <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                    <input type="password" name="re_pass" id="form_retype_password" class="form_inp"
+                                        placeholder="Repeat your password" autocomplete="off" />
+                                </div>
+                                <span class="error_form" id="retype_password_error_message"></span>
+                                <div class="form-group">
+                                    <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                                    <label for="agree-term" class="label-agree-term"><span><span></span></span>I
+                                        agree all
+                                        statements in <a href="#" class="term-service">Terms of service</a></label>
+                                </div>
+                                <div class="form-group form-button">
+                                    <input type="button" value="Register" id="button_of_register" class="form-submit">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="fin_sign-up" style="display:none">
+                            <h2 class="form-title">Sign up</h2>
+                            <p>Check the mail</p>
+                            <br>
+                            <form>
+                                <div class="form-group">
+                                    <label for="v_check"><i class="zmdi zmdi-email-open zmdi-hc-fw"></i></label>
+                                    <input type="text" name="v_check" id="inp_of_confirm_SUP" class="form_inp"
+                                        placeholder="Your Verification Code" autocomplete="off" />
+                                </div>
+                                <div class="form-group form-button">
+                                    <input type="button" value="Confirm" id="button_of_confirm_SUP" class="form-submit">
+                                </div>
+                            </form>
+                            <br>
+                            <br>
+                            <a href="#" id="get_the_gen_code_sign_up">IF you don't get the verfication code,send
+                                again</a>
+                        </div>
+                        <div class="signup-image">
+                            <figure><img src="img/img_for_log/signup-image.jpg" alt="sing up image"></figure>
+                            <a href="#" class="signup-image-link" id="way_to_sign_in">I am already member</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sign in  Form -->
+            <section class="sign-in" style="display:none">
+                <div class="container_of_sign">
+                    <div class="signin-content">
+                        <p class="close_zmdi"><i class="zmdi zmdi-close-circle-o zmdi-hc-2x"></i></p>
+                        <div class="signin-image">
+                            <figure><img src="img/img_for_log/signin-image.jpg" alt="sing up image"></figure>
+                            <a href="#" class="signup-image-link" id="way_to_sign_up">Create an account</a>
+                        </div>
+
+                        <div class="signin-form">
+                            <h2 class="form-title">Sign in</h2>
+                            <form class="register-form" id="login-form">
+                                <div class="form-group">
+                                    <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                    <input type="text" name="your_email" id="form_email2" placeholder="Your Email"
+                                        class="form_inp" autocomplete="off" />
+                                </div>
+                                <span class="error_form2" id="email_error_message2"></span>
+                                <div class="form-group">
+                                    <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                    <input type="password" name="your_pass" id="form_password2" placeholder="Password"
+                                        class="form_inp" autocomplete="off" />
+                                </div>
+                                <span class="error_form2" id="password_error_message2"></span>
+                                <a href="#" id="way_to_recover">Forgot Password?</a>
+                                <br>
+                                <br>
+                                <div class="form-group">
+                                    <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                                    <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember
+                                        me</label>
+                                </div>
+                                <div class="form-group form-button">
+                                    <input type="button" value="Log in" id="button_of_login" class="form-submit">
+                                </div>
+                            </form>
+                            <div class="social-login">
+                                <span class="social-label">Or login with</span>
+                                <ul class="socials">
+                                    <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                                    <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
+                                    <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="fin_sign-in" style="display:none">
+                            <h2 class="form-title">Sign in</h2>
+                            <p>Check the mail</p>
+                            <br>
+                            <form>
+                                <div class="form-group">
+                                    <label for="v_check"><i class="zmdi zmdi-email-open zmdi-hc-fw"></i></label>
+                                    <input type="text" name="v_check" id="inp_of_confirm_SIN" class="form_inp"
+                                        placeholder="Your Verification Code" autocomplete="off" />
+                                </div>
+                                <div class="form-group form-button">
+                                    <input type="button" value="Confirm" id="button_of_confirm_SIN" class="form-submit">
+                                </div>
+                            </form>
+                            <br>
+                            <br>
+                            <a href="#" id="get_the_gen_code_sign_in">Send again Verification Code</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recover Form -->
+            <section class="forgot_password" style="display:none">
+                <div class="container_of_sign">
+                    <div class="forgot_pass-content">
+                        <p class="close_zmdi"><i class="zmdi zmdi-close-circle-o zmdi-hc-2x"></i></p>
+                        <div class="recover-form_head">
+                            <h2 class="form-title">Recover password</h2>
+                            <form class="rec-form_head">
+                                <div class="form-group">
+                                    <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                    <input type="email" name="email" id="form_email_recover_head"
+                                        placeholder="Your Email" class="form_inp" autocomplete="off" />
+                                </div>
+                                <span class="error_form" id="email_error_message_rec_head"></span>
+                                <div class="form-group form-button">
+                                    <input type="button" value="Recover" id="button_of_recover_head"
+                                        class="form-submit">
+                                </div>
+                            </form>
+                        </div>
+                        <!--active-->
+                        <div class="fin_rec_act" style="display:none">
+                            <h2 class="form-title">Recover Password</h2>
+                            <p>Check the mail</p>
+                            <br>
+                            <form>
+                                <div class="form-group">
+                                    <label for="v_check"><i class="zmdi zmdi-email-open zmdi-hc-fw"></i></label>
+                                    <input type="text" name="v_check" id="inp_of_confirm_REC_act" class="form_inp"
+                                        placeholder="Your Verification Code" autocomplete="off" />
+                                </div>
+                                <div class="form-group form-button">
+                                    <input type="button" value="Confirm" id="button_of_confirm_REC_act"
+                                        class="form-submit">
+                                </div>
+                            </form>
+                            <br>
+                            <br>
+                            <a href="#" id="get_the_gen_code_recover_act">Don't get the verfication code?Send again</a>
+                        </div>
+                        <!--pending-->
+                        <div class="fin_rec_pend" style="display:none">
+                            <h2 class="form-title">Verification For Activation</h2>
+                            <p>Check the mail</p>
+                            <br>
+                            <form>
+                                <div class="form-group">
+                                    <label for="v_check"><i class="zmdi zmdi-email-open zmdi-hc-fw"></i></label>
+                                    <input type="text" name="v_check" id="inp_of_confirm_REC_pend" class="form_inp"
+                                        placeholder="Your Verification Code" autocomplete="off" />
+                                </div>
+                                <div class="form-group form-button">
+                                    <input type="button" value="Confirm" id="button_of_confirm_REC_pend"
+                                        class="form-submit">
+                                </div>
+                            </form>
+                            <br>
+                            <br>
+                            <a href="#" id="get_the_gen_code_recover_pend">Don't get the verfication code?Send again</a>
+                        </div>
+                        <!--Final part-->
+                        <div class="recover-form_final" style="display:none">
+                            <h2 class="form-title">Recover password</h2>
+                            <form class="rec-form">
+                                <div class="form-group">
+                                    <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                    <input type="email" name="email" id="form_email_recover_final"
+                                        placeholder="Your Email" class="form_inp" autocomplete="off" />
+                                </div>
+                                <span class="error_form" id="email_error_message_rec_final"></span>
+                                <div class="form-group">
+                                    <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                    <input type="password" name="pass" id="form_password_recover_final"
+                                        placeholder="New Password" class="form_inp" autocomplete="off" />
+                                </div>
+                                <span class="error_form" id="password_error_message_rec_final"></span>
+                                <div class="form-group">
+                                    <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                    <input type="password" name="re_pass" id="form_retype_password_recover_final"
+                                        class="form_inp" placeholder="Repeat your new password" autocomplete="off" />
+                                </div>
+                                <span class="error_form" id="retype_password_error_message_rec_final"></span>
+                                <div class="form-group form-button">
+                                    <input type="button" value="Recover" id="button_of_recover_final"
+                                        class="form-submit">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="signup-image">
+                            <figure><img src="img/img_for_log/forget_pass.jpg" alt="sing up image"></figure>
+                            <a href="#" id="way_to_sign_in_rec" class="signup-image-link">Back to Sign In</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+    </div>
+    </div>
+    <!--Navbar-->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white  ">
+            <a class="navbar-brand" href="index.html">YdCv <i class="fas fa-file-alt"></i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end " id="navbarNavAltMarkup">
+                <div class="navbar-nav my-nav ">
+                    <a class="nav-item nav-link active" href="index.html">Home<span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#about">About Us</a>
+                    <a class="nav-item nav-link" href="template.html">Template</a>
+                    <a class="nav-item nav-link " href="builder.html">CV Builder</a>
+                    <a class="btn btn-outline-primary" href="#" id="sign_view">Sign up/Sign in</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--Header-->
+    <header class="header-home">
+        <h3 class="text-lg-center m-5" id="title">Create your dream CV</h3>
+        <div class="container">
+            <div class="row">
+                <!-- animaciai kam videoi hamar naxatecvac tex   -->
+                <div class="video_cont">
+                    <img src="img/video.jpg" alt="nkar" class="video">
+                </div>
+                <div class=" col-md-8 col-sm-12 col-xs-12">
+
+                </div>
+                <!--- --->
+                <!---videi kam animaciai nkaraagrutyun kam havelyal informacia --->
+                <div class="header-about-text">
+                    <h4 id="name">Create your professional CV</h4><br><br>
+                    <div id="icon">
+                        <i class='fas'>&#xf044;</i>
+                        <span id="mark">Get acquainted with an interesting CV</span><br><br>
+                        <i class='fas'>&#xf044;</i>
+                        <span id="mark">Write your opinion about our CV</span><br><br>
+                        <i class='fas'>&#xf044;</i>
+                        <span id="mark">Select a CV format and start</span>
+                    </div>
+                    <a class="btn btn-outline-danger" style="padding: 0;" href="login.html">Create CV</a>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Carousel-->
+    <div class="container">
+        <!---teplentneri orinakneri section --->
+        <section class="example-template text-lg-center mt-5">
+            <h1 id="h1">Our CV design</h1>
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-3"><img src="img/cv1.jpg" class="d-block w-100" alt="..."
+                                    style="height: 361px"></div>
+                            <div class="col-3"><img src="img/cv2.jpg" class="d-block w-100" alt="..."> </div>
+                            <div class="col-3"><img src="img/cv3.jpg" class="d-block w-100" alt="..."></div>
+                            <div class="col-3"><img src="img/cv4.jpg" class="d-block w-100" alt="..."> </div>
+                        </div>
+
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-3"><img src="img/cv3.jpg" class="d-block w-100" alt="..."></div>
+                            <div class="col-3"><img src="img/cv4.jpg" class="d-block w-100" alt="..."> </div>
+                            <div class="col-3"><img src="img/cv5.jpg" class="d-block w-100" alt="..."></div>
+                            <div class="col-3"><img src="img/cv6.jpg" class="d-block w-100" alt="..."> </div>
+                        </div>
+                    </div>
+
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <a class="btn btn-outline-info m-5" href="builder.html">Start creating my CV</a>
+        </section>
+
+        <!---cometneri section --->
+        <section class="about text-lg-center" id="about">
+            <div class="row">
+                <div class="col">
+                    <h3 class="text-lg-center m-5">CV-Template is trusted by users</h3>
+                    <textarea placeholder="Your Opinion About Us" autocomplete="off" id="com"></textarea>
+                    <button id="comment"></button>
+                </div>
+            </div>
+            <a class="btn btn-outline-info m-5" href="builder.html">Start creating my CV</a>
+        </section>
+        <!-- -->
+    </div>
+    <!--Footer-->
+    <footer class="card-footer text-lg-center bg-dark mt-5">
+        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquam illum libero maxime necessitatibus officia possimus quasi quisquam!</span>
+        </p>
+    </footer>
+    <!---->
+    <!-- JS -->
+    <script src="js/main.js"></script>
+    <script src="js/sign/sign-up.js"></script>
+    <script src="js/sign/sign-in.js"></script>
+    <script src="js/v_check/v_check_sign_up.js"></script>
+    <script src="js/v_check/v_check_sign_in.js"></script>
+    <script src="js/v_check/v_check_rec_act.js"></script>
+    <script src="js/v_check/v_check_rec_pend.js"></script>
+    <script src="js/recover/recover_head.js"></script>
+    <script src="js/recover/rec_fin.js"></script>
+    <script src="js/load/load.js"></script>
+</body>
+
+</html>
